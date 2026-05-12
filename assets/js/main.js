@@ -40,48 +40,41 @@ document.addEventListener('DOMContentLoaded', () => {
     if (themeToggle) themeToggle.addEventListener('click', handleTheme);
     if (mobileThemeToggle) mobileThemeToggle.addEventListener('click', handleTheme);
 
-    // Mobile Menu
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+    // Back to Top Button Creation
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.id = 'back-to-top';
+    backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    document.body.appendChild(backToTopBtn);
 
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            mobileMenu.classList.toggle('active');
-            // Change icon to X when open
-            const icon = mobileMenuBtn.querySelector('i');
-            if (mobileMenu.classList.contains('active')) {
-                icon.classList.replace('fa-bars', 'fa-times');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-            } else {
-                icon.classList.replace('fa-times', 'fa-bars');
-                document.body.style.overflow = '';
-            }
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
+    });
 
-        // Close menu when clicking a link
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (mobileMenu.classList.contains('active') && !mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                mobileMenu.classList.remove('active');
-                mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
-                document.body.style.overflow = '';
-            }
-        });
-    }
-
-    // Reveal Animations on Scroll
+    // Scroll Events
+    const header = document.querySelector('header');
     const revealElements = document.querySelectorAll('.reveal');
-    const revealOnScroll = () => {
+    
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
+
+        // Header stabilization & shrinking
+        if (scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        // Back to Top visibility
+        if (scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+
+        // Reveal Animations
         const triggerBottom = window.innerHeight / 5 * 4;
         revealElements.forEach(el => {
             const elementTop = el.getBoundingClientRect().top;
@@ -91,8 +84,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Initial check
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+
+    // Helper to handle scrollbar jump
+    const toggleBodyScroll = (isFixed) => {
+        if (isFixed) {
+            const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+            document.body.style.paddingRight = `${scrollBarWidth}px`;
+            document.body.style.overflow = 'hidden';
+            header.style.paddingRight = `${scrollBarWidth}px`;
+        } else {
+            document.body.style.paddingRight = '';
+            document.body.style.overflow = '';
+            header.style.paddingRight = '';
+        }
+    };
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+                toggleBodyScroll(true);
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+                toggleBodyScroll(false);
+            }
+        });
+
+        // Close menu when clicking a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                toggleBodyScroll(false);
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (mobileMenu.classList.contains('active') && !mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                toggleBodyScroll(false);
+            }
+        });
+    }
 
     // Form Validation (Generic)
     const forms = document.querySelectorAll('form');
@@ -118,15 +163,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Password Visibility Toggle
-    const togglePassword = document.getElementById('togglePassword');
-    const passwordInput = document.getElementById('password');
-    if (togglePassword && passwordInput) {
-        togglePassword.addEventListener('click', () => {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            const icon = togglePassword.querySelector('i');
+    const passwordToggles = document.querySelectorAll('.password-toggle');
+    passwordToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const input = toggle.parentElement.querySelector('input');
+            const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+            input.setAttribute('type', type);
+            const icon = toggle.querySelector('i');
             icon.classList.toggle('fa-eye');
             icon.classList.toggle('fa-eye-slash');
         });
-    }
+    });
 });

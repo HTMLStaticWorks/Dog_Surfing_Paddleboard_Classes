@@ -20,7 +20,7 @@
         }
     </script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%2336D1DC'/><path d='M30 45c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm30-20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm-35 15c10.5 0 17.5-12 17.5-12s-7-5-17.5-5-17.5 5-17.5 5 7 12 17.5 12z' fill='white'/></svg>">
 </head>
 <body class="transition-colors duration-300">
@@ -28,7 +28,7 @@
     <!-- Header -->
     <header class="sticky top-0 w-full z-50 transition-all duration-300">
         <nav class="container mx-auto  py-4 flex items-center justify-between">
-            <a href="index.html" class="flex items-center space-x-3 group">
+            <a href="index.html" class="flex items-center gap-3 group">
                 <div class="w-10 h-10 bg-[var(--primary)] rounded-xl flex items-center justify-center shadow-lg shadow-[var(--primary)]/20 transition-transform group-hover:scale-110">
                     <i class="fas fa-paw text-white text-xl"></i>
                 </div>
@@ -36,7 +36,7 @@
             </a>
 
             <!-- Desktop Menu -->
-            <div class="hidden xl:flex items-center space-x-8">
+            <div class="hidden lg:flex items-center gap-4 xl:gap-8">
                 <a href="index.html" class="nav-link active font-medium">Home 1</a>
                 <a href="pages/home-2.html" class="nav-link font-medium">Home 2</a>
                 <a href="pages/about.html" class="nav-link font-medium">About</a>
@@ -46,7 +46,7 @@
                 <a href="pages/contact.html" class="nav-link font-medium">Contact</a>
             </div>
 
-            <div class="hidden xl:flex items-center space-x-4">
+            <div class="hidden lg:flex items-center gap-4">
                 <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
                     <i class="fas fa-sun dark:hidden"></i>
                     <i class="fas fa-moon hidden dark:block"></i>
@@ -58,13 +58,13 @@
             </div>
 
             <!-- Mobile Toggle -->
-            <button id="mobile-menu-btn" class="xl:hidden text-2xl">
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-slate-900 dark:text-white">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden xl:hidden flex-col space-y-4 pt-4 pb-8 border-t border-gray-100 dark:border-gray-800">
+        <div id="mobile-menu" class="hidden lg:hidden flex-col pt-4 pb-8 border-t border-gray-100 dark:border-gray-800">
             <a href="index.html" class="nav-link active font-medium px-4">Home 1</a>
             <a href="pages/home-2.html" class="nav-link font-medium px-4">Home 2</a>
             <a href="pages/about.html" class="nav-link font-medium px-4">About</a>
@@ -72,15 +72,18 @@
             <a href="pages/gallery.html" class="nav-link font-medium px-4">Gallery</a>
             <a href="pages/booking.html" class="nav-link font-medium px-4">Booking</a>
             <a href="pages/contact.html" class="nav-link font-medium px-4">Contact</a>
-            <div class="flex items-center space-x-4 pt-4">
-                <button id="mobile-theme-toggle" class="p-3 rounded-full bg-gray-100 dark:bg-slate-800 transition-colors">
-                    <i class="fas fa-sun dark:hidden text-lg"></i>
-                    <i class="fas fa-moon hidden dark:block text-lg"></i>
-                </button>
-                <button id="mobile-rtl-toggle" class="p-3 rounded-full bg-gray-100 dark:bg-slate-800 transition-colors">
-                    <i class="fas fa-globe text-lg"></i>
-                </button>
-                <a href="pages/login.html" class=" py-2 bg-[var(--primary)] text-white rounded-full font-bold px-8 text-center mx-4">Login</a>
+            
+            <div class="flex flex-col space-y-6 px-8 pt-8 mt-4 border-t border-gray-100 dark:border-gray-800">
+                <div class="flex items-center justify-center gap-6">
+                    <button id="mobile-theme-toggle" class="w-14 h-14 rounded-2xl bg-gray-100 dark:bg-slate-800 flex items-center justify-center text-xl shadow-sm">
+                        <i class="fas fa-sun dark:hidden"></i>
+                        <i class="fas fa-moon hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-rtl-toggle" class="w-14 h-14 rounded-2xl bg-gray-100 dark:bg-slate-800 flex items-center justify-center text-xl shadow-sm">
+                        <i class="fas fa-globe"></i>
+                    </button>
+                </div>
+                <a href="pages/login.html" class="w-full py-4 bg-[var(--primary)] text-white rounded-2xl font-bold shadow-lg text-center btn-glow text-lg">Login Account</a>
             </div>
         </div>
     </header>
@@ -94,9 +97,9 @@
         <div class="container mx-auto  relative z-10 text-center text-white reveal reveal-up">
             <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Where Every Dog <br><span class="text-[var(--primary)]">Finds Their Wave</span></h1>
             <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto opacity-90">Professional surfing and paddleboard classes designed specifically for your furry best friends. Safe, fun, and unforgettable!</p>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
                 <a href="pages/booking.html" class="px-10 py-4 bg-[var(--primary)] text-white rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition-all btn-glow">Book a Class Now</a>
-                <a href="pages/classes.html" class="px-10 py-4 glass text-white rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all">Explore Classes</a>
+                <a href="pages/classes.html" class="px-10 py-4 glass text-slate-900 dark:text-white rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all">Explore Classes</a>
             </div>
 
         </div>
@@ -111,39 +114,39 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Class 1 -->
-                <div class="glass p-8 rounded-3xl card-hover reveal reveal-left">
-                    <div class="h-56 overflow-hidden relative">
+                <div class="glass p-8 rounded-3xl card-hover reveal reveal-left flex flex-col h-full">
+                    <div class="h-56 mb-6 rounded-2xl overflow-hidden relative">
                         <img src="assets/images/hero-1.png" alt="Beginner Surf" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Beginner Surf Intro</h3>
                     <p class="text-gray-600 dark:text-gray-400 mb-6">Introduction to water confidence and basic board balance for dogs of all sizes.</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-[var(--primary)] font-bold text-xl">$45 / Session</span>
-                        <a href="pages/booking.html" class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline">Join SurfPup →</a>
+                    <div class="mt-auto flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-gray-100 dark:border-slate-700/50">
+                        <span class="text-[var(--primary)] font-bold text-xl whitespace-nowrap">$45 / Session</span>
+                        <a href="pages/booking.html" class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline whitespace-nowrap">Learn More →</a>
                     </div>
                 </div>
                 <!-- Class 2 -->
-                <div class="glass p-8 rounded-3xl card-hover reveal reveal-up">
-                    <div class="h-56 mb-6 rounded-2xl overflow-hidden">
+                <div class="glass p-8 rounded-3xl card-hover reveal reveal-up flex flex-col h-full">
+                    <div class="h-56 mb-6 rounded-2xl overflow-hidden relative">
                         <img src="assets/images/hero-2.png" alt="Paddleboard" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Zen Paddleboarding</h3>
                     <p class="text-gray-600 dark:text-gray-400 mb-6">A calm and relaxing experience for dogs who prefer steady waters and scenic views.</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-[var(--primary)] font-bold text-xl">$60 / Session</span>
-                        <a href="pages/booking.html" class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline">Learn More →</a>
+                    <div class="mt-auto flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-gray-100 dark:border-slate-700/50">
+                        <span class="text-[var(--primary)] font-bold text-xl whitespace-nowrap">$60 / Session</span>
+                        <a href="pages/booking.html" class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline whitespace-nowrap">Learn More →</a>
                     </div>
                 </div>
                 <!-- Class 3 -->
-                <div class="glass p-8 rounded-3xl card-hover reveal reveal-right md:col-span-2 lg:col-span-1 md:max-w-lg md:mx-auto lg:max-w-none">
-                    <div class="h-56 mb-6 rounded-2xl overflow-hidden">
+                <div class="glass p-8 rounded-3xl card-hover reveal reveal-right flex flex-col h-full">
+                    <div class="h-56 mb-6 rounded-2xl overflow-hidden relative">
                         <img src="assets/images/gallery-2.png" alt="Pro Surf" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Advanced Wave Riders</h3>
                     <p class="text-gray-600 dark:text-gray-400 mb-6">For the adventurous dogs ready to catch real waves and perform tricks on the board.</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-[var(--primary)] font-bold text-xl">$75 / Session</span>
-                        <a href="pages/booking.html" class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline">Learn More →</a>
+                    <div class="mt-auto flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-gray-100 dark:border-slate-700/50">
+                        <span class="text-[var(--primary)] font-bold text-xl whitespace-nowrap">$75 / Session</span>
+                        <a href="pages/booking.html" class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline whitespace-nowrap">Learn More →</a>
                     </div>
                 </div>
             </div>
@@ -222,42 +225,42 @@
         <div class="container mx-auto ">
             <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center reveal reveal-up">Happy Tail Waggers</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-3xl reveal reveal-left">
+                <div class="glass p-8 rounded-3xl reveal reveal-left flex flex-col h-full">
                     <div class="flex items-center space-x-1 text-yellow-400 mb-4">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 mb-6">"Cooper absolutely loved his first surf lesson! The trainers were so patient and kind. Seeing him catch a wave was the highlight of my year!"</p>
-                    <div class="flex items-center space-x-4">
-                        <img src="https://i.pravatar.cc/150?u=sarah" alt="Sarah" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white">
-                        <div>
-                            <p class="font-bold">Sarah & Cooper</p>
-                            <p class="text-sm text-gray-500">Golden Retriever Mom</p>
+                    <p class="text-gray-700 dark:text-gray-300 mb-6 flex-grow">"Cooper absolutely loved his first surf lesson! The trainers were so patient and kind. Seeing him catch a wave was the highlight of my year!"</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <img src="https://i.pravatar.cc/150?u=sarah" alt="Sarah" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white flex-shrink-0">
+                        <div class="min-w-0">
+                            <p class="font-bold truncate">Sarah & Cooper</p>
+                            <p class="text-sm text-gray-500 truncate">Golden Retriever Mom</p>
                         </div>
                     </div>
                 </div>
-                <div class="glass p-8 rounded-3xl reveal reveal-up">
+                <div class="glass p-8 rounded-3xl reveal reveal-up flex flex-col h-full">
                     <div class="flex items-center space-x-1 text-yellow-400 mb-4">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 mb-6">"The paddleboarding session was so peaceful. Max was nervous at first but now he wants to jump on every board he sees!"</p>
-                    <div class="flex items-center space-x-4">
-                        <img src="https://i.pravatar.cc/150?u=james" alt="James" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white">
-                        <div>
-                            <p class="font-bold">James & Max</p>
-                            <p class="text-sm text-gray-500">Labrador Owner</p>
+                    <p class="text-gray-700 dark:text-gray-300 mb-6 flex-grow">"The paddleboarding session was so peaceful. Max was nervous at first but now he wants to jump on every board he sees!"</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <img src="https://i.pravatar.cc/150?u=james" alt="James" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white flex-shrink-0">
+                        <div class="min-w-0">
+                            <p class="font-bold truncate">James & Max</p>
+                            <p class="text-sm text-gray-500 truncate">Labrador Owner</p>
                         </div>
                     </div>
                 </div>
-                <div class="glass p-8 rounded-3xl reveal reveal-right md:col-span-2 lg:col-span-1 md:max-w-lg md:mx-auto lg:max-w-none">
+                <div class="glass p-8 rounded-3xl reveal reveal-right flex flex-col h-full">
                     <div class="flex items-center space-x-1 text-yellow-400 mb-4">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 mb-6">"Professional, safe, and incredibly fun. I recommend SurfPup to every dog owner I know. A must-try experience!"</p>
-                    <div class="flex items-center space-x-4">
-                        <img src="https://i.pravatar.cc/150?u=emily" alt="Emily" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white">
-                        <div>
-                            <p class="font-bold">Emily & Bella</p>
-                            <p class="text-sm text-gray-500">Corgi Parent</p>
+                    <p class="text-gray-700 dark:text-gray-300 mb-6 flex-grow">"Professional, safe, and incredibly fun. I recommend SurfPup to every dog owner I know. A must-try experience!"</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <img src="https://i.pravatar.cc/150?u=emily" alt="Emily" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white flex-shrink-0">
+                        <div class="min-w-0">
+                            <p class="font-bold truncate">Emily & Bella</p>
+                            <p class="text-sm text-gray-500 truncate">Corgi Parent</p>
                         </div>
                     </div>
                 </div>
@@ -285,7 +288,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white pt-24 pb-12 border-t border-gray-100 dark:border-gray-800 transition-colors duration-300">
+    <footer class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white pt-16 pb-8 border-t border-gray-100 dark:border-gray-800 transition-colors duration-300">
         <div class="container mx-auto ">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div>
@@ -299,7 +302,7 @@
                     <div class="flex space-x-4">
                         <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
                 <div>
@@ -339,11 +342,9 @@
                     </form>
                 </div>
             </div>
-            <div class="border-t border-gray-100 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-center items-center relative">
+            <div class="border-t border-gray-100 dark:border-gray-800 pt-6 flex flex-col md:flex-row justify-center items-center relative">
                 <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2026 SurfPup Dog Surfing Academy. All rights reserved.</p>
-                <a href="#" class="md:absolute md:right-0 w-10 h-10 bg-[var(--primary)] text-white rounded-full flex items-center justify-center hover:scale-110 transition-all shadow-lg group">
-                    <i class="fas fa-arrow-up text-sm transition-transform group-hover:-translate-y-1"></i>
-                </a>
+                
             </div>
         </div>
     </footer>
@@ -351,3 +352,6 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+
+

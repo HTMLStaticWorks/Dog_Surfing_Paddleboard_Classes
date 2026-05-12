@@ -19,7 +19,7 @@
         }
     </script>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%2336D1DC'/><path d='M30 45c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm30-20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm-35 15c10.5 0 17.5-12 17.5-12s-7-5-17.5-5-17.5 5-17.5 5 7 12 17.5 12z' fill='white'/></svg>">
 </head>
 <body class="transition-colors duration-300">
@@ -27,14 +27,14 @@
     <!-- Header -->
     <header class="sticky top-0 w-full z-50 transition-all duration-300">
         <nav class="container mx-auto  py-4 flex items-center justify-between">
-            <a href="../index.html" class="flex items-center space-x-3 group">
+            <a href="../index.html" class="flex items-center gap-3 group">
                 <div class="w-10 h-10 bg-[var(--primary)] rounded-xl flex items-center justify-center shadow-lg shadow-[var(--primary)]/20 transition-transform group-hover:scale-110">
                     <i class="fas fa-paw text-white text-xl"></i>
                 </div>
                 <span class="text-2xl font-black tracking-tighter text-[var(--primary-dark)] dark:text-white">Surf<span class="text-[var(--primary)]">Pup</span></span>
             </a>
 
-            <div class="hidden xl:flex items-center space-x-8">
+            <div class="hidden lg:flex items-center gap-4 xl:gap-8">
                 <a href="../index.html" class="nav-link font-medium">Home 1</a>
                 <a href="home-2.html" class="nav-link font-medium">Home 2</a>
                 <a href="about.html" class="nav-link font-medium">About</a>
@@ -44,7 +44,7 @@
                 <a href="contact.html" class="nav-link font-medium">Contact</a>
             </div>
 
-            <div class="hidden xl:flex items-center space-x-4">
+            <div class="hidden lg:flex items-center gap-4">
                 <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
                     <i class="fas fa-sun dark:hidden"></i>
                     <i class="fas fa-moon hidden dark:block"></i>
@@ -55,12 +55,12 @@
                 <a href="login.html" class=" py-2 bg-[var(--primary)] text-white rounded-full font-bold shadow-lg hover:scale-105 transition-all btn-glow px-8">Login</a>
             </div>
 
-            <button id="mobile-menu-btn" class="xl:hidden text-2xl">
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl text-slate-900 dark:text-white">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
 
-        <div id="mobile-menu" class="hidden xl:hidden flex-col space-y-4 pt-4 pb-8 border-t border-gray-100 dark:border-gray-800">
+        <div id="mobile-menu" class="hidden lg:hidden flex-col pt-4 pb-8 border-t border-gray-100 dark:border-gray-800">
             <a href="../index.html" class="nav-link font-medium px-4">Home 1</a>
             <a href="home-2.html" class="nav-link font-medium px-4">Home 2</a>
             <a href="about.html" class="nav-link font-medium px-4">About</a>
@@ -68,8 +68,17 @@
             <a href="gallery.html" class="nav-link font-medium px-4">Gallery</a>
             <a href="booking.html" class="nav-link font-medium px-4">Booking</a>
             <a href="contact.html" class="nav-link font-medium px-4">Contact</a>
-            <div class="flex items-center space-x-4 px-4 pt-4">
-                <a href="login.html" class="w-full py-3 bg-[var(--primary)] text-white rounded-full font-bold shadow-lg text-center">Login</a>
+                        <div class="flex flex-col space-y-6 px-8 pt-8 mt-4 border-t border-gray-100 dark:border-gray-800">
+                <div class="flex items-center justify-center gap-6">
+                    <button id="mobile-theme-toggle" class="w-14 h-14 rounded-2xl bg-gray-100 dark:bg-slate-800 flex items-center justify-center text-xl shadow-sm">
+                        <i class="fas fa-sun dark:hidden"></i>
+                        <i class="fas fa-moon hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-rtl-toggle" class="w-14 h-14 rounded-2xl bg-gray-100 dark:bg-slate-800 flex items-center justify-center text-xl shadow-sm">
+                        <i class="fas fa-globe"></i>
+                    </button>
+                </div>
+                <a href="login.html" class="w-full py-4 bg-[var(--primary)] text-white rounded-2xl font-bold shadow-lg text-center btn-glow text-lg">Login Account</a>
             </div>
         </div>
     </header>
@@ -167,15 +176,15 @@
         <div class="container mx-auto  text-center relative z-10">
             <h2 class="text-4xl md:text-5xl font-bold mb-8 reveal reveal-up">Ready to ride the waves?</h2>
             <p class="text-xl mb-12 opacity-80 max-w-2xl mx-auto reveal reveal-up">All our classes include equipment rental, safety gear, and professional photos of your dog's best moments.</p>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 reveal reveal-up">
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 reveal reveal-up">
                 <a href="booking.html" class="px-12 py-5 bg-[var(--primary)] text-white rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition-all btn-glow">Reserve Your Spot</a>
-                <a href="contact.html" class="px-12 py-5 glass text-white rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all">Ask a Question</a>
+                <a href="contact.html" class="px-12 py-5 glass text-white rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all btn-glow">Ask a Question</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white pt-24 pb-12 border-t border-gray-100 dark:border-gray-800 transition-colors duration-300">
+    <footer class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white pt-16 pb-8 border-t border-gray-100 dark:border-gray-800 transition-colors duration-300">
         <div class="container mx-auto ">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div>
@@ -189,7 +198,7 @@
                     <div class="flex space-x-4">
                         <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
                 <div>
@@ -229,11 +238,9 @@
                     </form>
                 </div>
             </div>
-            <div class="border-t border-gray-100 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-center items-center relative">
+            <div class="border-t border-gray-100 dark:border-gray-800 pt-6 flex flex-col md:flex-row justify-center items-center relative">
                 <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2026 SurfPup Dog Surfing Academy. All rights reserved.</p>
-                <a href="#" class="md:absolute md:right-0 w-10 h-10 bg-[var(--primary)] text-white rounded-full flex items-center justify-center hover:scale-110 transition-all shadow-lg group">
-                    <i class="fas fa-arrow-up text-sm transition-transform group-hover:-translate-y-1"></i>
-                </a>
+                
             </div>
         </div>
     </footer>
@@ -241,3 +248,8 @@
     <script src="../assets/js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
