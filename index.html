@@ -26,7 +26,7 @@
 <body class="transition-colors duration-300">
 
     <!-- Header -->
-    <header class="sticky top-0 w-full z-50 transition-all duration-300">
+    <header class="fixed top-0 w-full z-50 transition-all duration-300">
         <nav class="container mx-auto  py-4 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 group">
                 <div class="w-10 h-10 bg-[var(--primary)] rounded-xl flex items-center justify-center shadow-lg shadow-[var(--primary)]/20 transition-transform group-hover:scale-110">
@@ -99,7 +99,7 @@
             <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto opacity-90">Professional surfing and paddleboard classes designed specifically for your furry best friends. Safe, fun, and unforgettable!</p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
                 <a href="pages/booking.html" class="px-10 py-4 bg-[var(--primary)] text-white rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition-all btn-glow">Book a Class Now</a>
-                <a href="pages/classes.html" class="px-10 py-4 glass text-slate-900 dark:text-white rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all">Explore Classes</a>
+                <a href="pages/classes.html" class="px-10 py-4 border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all">Explore Classes</a>
             </div>
 
         </div>
@@ -137,16 +137,18 @@
                         <a href="pages/booking.html" class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline whitespace-nowrap">Learn More →</a>
                     </div>
                 </div>
-                <!-- Class 3 -->
-                <div class="glass p-8 rounded-3xl card-hover reveal reveal-right flex flex-col h-full">
-                    <div class="h-56 mb-6 rounded-2xl overflow-hidden relative">
-                        <img src="assets/images/gallery-2.png" alt="Pro Surf" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Advanced Wave Riders</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">For the adventurous dogs ready to catch real waves and perform tricks on the board.</p>
-                    <div class="mt-auto flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-gray-100 dark:border-slate-700/50">
-                        <span class="text-[var(--primary)] font-bold text-xl whitespace-nowrap">$75 / Session</span>
-                        <a href="pages/booking.html" class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline whitespace-nowrap">Learn More →</a>
+                <!-- Class 3 centered on tablet -->
+                <div class="md:col-span-2 lg:col-span-1 md:flex md:justify-center">
+                    <div class="glass p-8 rounded-3xl card-hover reveal reveal-right flex flex-col h-full w-full max-w-md lg:max-w-none">
+                        <div class="h-56 mb-6 rounded-2xl overflow-hidden relative">
+                            <img src="assets/images/gallery-2.png" alt="Pro Surf" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Advanced Wave Riders</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">For the adventurous dogs ready to catch real waves and perform tricks on the board.</p>
+                        <div class="mt-auto flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-gray-100 dark:border-slate-700/50">
+                            <span class="text-[var(--primary)] font-bold text-xl whitespace-nowrap">$75 / Session</span>
+                            <a href="pages/booking.html" class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline whitespace-nowrap">Learn More →</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -159,7 +161,7 @@
             <div class="relative max-w-xl mx-auto lg:mx-0 w-full">
                 <img src="assets/images/team.png" alt="Safety Team" class="rounded-[3rem] shadow-2xl w-full md:h-[450px] h-auto object-cover" loading="lazy">
             </div>
-            <div class="lg:w-1/2 reveal reveal-right">
+            <div class="lg:w-1/2 reveal reveal-right text-center lg:text-left">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">SurfPup Safety Standards</h2>
                 <p class="text-lg text-gray-700 dark:text-gray-300 mb-8">We believe every dog can enjoy the water, but safety is our top priority. We evaluate breed eligibility based on swimming ability and stamina.</p>
                 <ul class="space-y-4 mb-10">
@@ -176,7 +178,7 @@
                         <span>Temperature-controlled beach zones</span>
                     </li>
                 </ul>
-                <a href="pages/about.html" class="inline-block px-8 py-3 bg-[var(--primary-dark)] text-white rounded-full font-bold hover:bg-[var(--primary)] transition-all">Read Safety Guidelines</a>
+                <a href="pages/about.html" class="inline-block px-8 py-3 bg-[var(--primary-dark)] text-white rounded-full font-bold hover:bg-[var(--primary)] transition-all mx-auto lg:mx-0">Read Safety Guidelines</a>
             </div>
         </div>
     </section>
@@ -188,7 +190,7 @@
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Find The Perfect Fit</h2>
                 <p class="text-gray-600 dark:text-gray-400">Our life jacket sizing guide ensures your pup stays afloat with comfort.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <div class="glass p-10 rounded-3xl text-center card-hover reveal reveal-up" style="transition-delay: 0.1s">
                     <div class="w-20 h-20 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[var(--primary)]/20">
                         <span class="text-3xl font-bold text-white">S</span>
@@ -205,13 +207,16 @@
                     <p class="text-white/80 mb-4 font-medium">16 - 40 lbs</p>
                     <p class="text-white/70">Ideal for Beagles, Bulldogs, and Spaniels.</p>
                 </div>
-                <div class="glass p-10 rounded-3xl text-center card-hover reveal reveal-up" style="transition-delay: 0.3s">
-                    <div class="w-20 h-20 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[var(--primary)]/20">
-                        <span class="text-3xl font-bold text-white">L</span>
+                <!-- Size L centered on tablet -->
+                <div class="md:col-span-2 lg:col-span-1 md:flex md:justify-center">
+                    <div class="glass p-10 rounded-3xl text-center card-hover reveal reveal-up w-full max-w-md lg:max-w-none" style="transition-delay: 0.3s">
+                        <div class="w-20 h-20 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[var(--primary)]/20">
+                            <span class="text-3xl font-bold text-white">L</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Large</h3>
+                        <p class="text-gray-500 mb-4">40+ lbs</p>
+                        <p class="text-gray-600 dark:text-gray-400">Great for Labs, Goldens, and Shepherds.</p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-2">Large</h3>
-                    <p class="text-gray-500 mb-4">40+ lbs</p>
-                    <p class="text-gray-600 dark:text-gray-400">Great for Labs, Goldens, and Shepherds.</p>
                 </div>
             </div>
             <div class="mt-16 text-center reveal reveal-up">
@@ -251,16 +256,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="glass p-8 rounded-3xl reveal reveal-right flex flex-col h-full">
-                    <div class="flex items-center space-x-1 text-yellow-400 mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-700 dark:text-gray-300 mb-6 flex-grow">"Professional, safe, and incredibly fun. I recommend SurfPup to every dog owner I know. A must-try experience!"</p>
-                    <div class="flex items-center gap-4 mt-auto">
-                        <img src="https://i.pravatar.cc/150?u=emily" alt="Emily" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white flex-shrink-0">
-                        <div class="min-w-0">
-                            <p class="font-bold truncate">Emily & Bella</p>
-                            <p class="text-sm text-gray-500 truncate">Corgi Parent</p>
+                <!-- Testimonial 3 centered on tablet -->
+                <div class="md:col-span-2 lg:col-span-1 md:flex md:justify-center">
+                    <div class="glass p-8 rounded-3xl reveal reveal-right flex flex-col h-full w-full max-w-md lg:max-w-none">
+                        <div class="flex items-center space-x-1 text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6 flex-grow">"Professional, safe, and incredibly fun. I recommend SurfPup to every dog owner I know. A must-try experience!"</p>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <img src="https://i.pravatar.cc/150?u=emily" alt="Emily" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white flex-shrink-0">
+                            <div class="min-w-0">
+                                <p class="font-bold truncate">Emily & Bella</p>
+                                <p class="text-sm text-gray-500 truncate">Corgi Parent</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -272,10 +280,10 @@
     <section class=" bg-white dark:bg-slate-900 overflow-hidden">
         <div class="container mx-auto ">
             <div class="flex flex-col lg:flex-row items-center gap-16 mb-20">
-                <div class="lg:w-1/2 reveal reveal-left">
+                <div class="lg:w-1/2 reveal reveal-left text-center lg:text-left">
                     <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Make a Splash?</h2>
                     <p class="text-lg text-gray-600 dark:text-gray-400 mb-10">Don't let your dog miss out on the adventure of a lifetime. Book your first session today and join our surfing community!</p>
-                    <a href="pages/booking.html" class="inline-block px-10 py-4 bg-[var(--primary)] text-white rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all btn-glow">Start Your Adventure</a>
+                    <a href="pages/booking.html" class="inline-block px-10 py-4 bg-[var(--primary)] text-white rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all btn-glow mx-auto lg:mx-0">Start Your Adventure</a>
                 </div>
                 <div class="lg:w-1/2 grid grid-cols-2 gap-4 reveal reveal-right">
                     <img src="assets/images/gallery-1.png" alt="Gallery 1" class="rounded-2xl h-48 w-full object-cover card-hover transition-transform duration-500 hover:scale-105" loading="lazy">

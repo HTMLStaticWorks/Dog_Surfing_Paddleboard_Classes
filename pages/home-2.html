@@ -25,7 +25,7 @@
 <body class="transition-colors duration-300">
 
     <!-- Header -->
-    <header class="sticky top-0 w-full z-50 transition-all duration-300">
+    <header class="fixed top-0 w-full z-50 transition-all duration-300">
         <nav class="container mx-auto  py-4 flex items-center justify-between">
             <a href="../index.html" class="flex items-center gap-3 group">
                 <div class="w-10 h-10 bg-[var(--primary)] rounded-xl flex items-center justify-center shadow-lg shadow-[var(--primary)]/20 transition-transform group-hover:scale-110">
@@ -189,7 +189,8 @@
                     <a href="booking.html" class="mt-auto block w-full py-4 bg-[var(--primary)] text-white font-bold rounded-xl hover:scale-105 transition-all shadow-lg text-center">Select Package</a>
                 </div>
                 <!-- Platinum -->
-                <div class="glass p-12 rounded-[2rem] card-hover reveal reveal-up flex flex-col h-full" style="transition-delay: 0.3s">
+                <div class="md:col-span-2 lg:col-span-1 md:flex md:justify-center">
+                    <div class="glass p-12 rounded-[2rem] card-hover reveal reveal-up flex flex-col h-full w-full max-w-md lg:max-w-none" style="transition-delay: 0.3s">
                     <h3 class="text-2xl font-bold mb-4">The Pro</h3>
                     <div class="text-5xl font-extrabold mb-8 text-[var(--primary-dark)] dark:text-white">$450</div>
                     <ul class="space-y-4 mb-10 text-gray-600 dark:text-gray-400">
@@ -200,6 +201,7 @@
                     </ul>
                     <a href="booking.html" class="mt-auto block w-full py-4 border-2 border-[var(--primary)] text-[var(--primary)] font-bold rounded-xl hover:bg-[var(--primary)] hover:text-white transition-all text-center">Select Package</a>
                 </div>
+            </div>
             </div>
         </div>
     </section>

@@ -24,7 +24,7 @@
 </head>
 <body class="bg-[var(--beach-sand)] dark:bg-slate-900 min-h-screen flex items-center justify-center p-6 transition-colors duration-300">
     <!-- Utility Toggles -->
-    <div class="fixed top-8 right-8 z-[100] flex items-center gap-3">
+    <div class="absolute top-4 right-4 lg:fixed lg:top-8 lg:right-8 z-[100] flex items-center gap-2 md:gap-3">
         <button id="theme-toggle" class="w-12 h-12 rounded-2xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-md shadow-2xl border border-white/20 flex items-center justify-center hover:scale-110 transition-all text-slate-900 dark:text-white">
             <i class="fas fa-sun dark:hidden"></i>
             <i class="fas fa-moon hidden dark:block"></i>
@@ -48,7 +48,7 @@
                 <p class="text-gray-500">Enter your details to access your account.</p>
             </div>
 
-            <form class="space-y-6">
+            <form class="space-y-4">
                 <div>
                     <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
                     <input type="email" placeholder="hello@example.com" class="w-full  py-4 px-6 rounded-2xl border border-gray-100 dark:border-slate-700 bg-gray-50 dark:bg-slate-900 outline-none focus:ring-2 focus:ring-[var(--primary)] transition-all" required>
@@ -62,13 +62,12 @@
                         </button>
                     </div>
                 </div>
-                
-                <div class="flex items-center justify-between">
-                    <label class="flex items-center space-x-2 cursor-pointer group">
+                <div class="flex items-center justify-between gap-2">
+                    <label class="flex items-center space-x-2 cursor-pointer group whitespace-nowrap">
                         <input type="checkbox" class="w-5 h-5 rounded border-gray-300 dark:border-slate-600 text-[var(--primary)] focus:ring-[var(--primary)] transition-all cursor-pointer">
                         <span class="text-sm text-gray-600 dark:text-gray-400 group-hover:text-[var(--primary)] transition-colors">Remember Me</span>
                     </label>
-                    <a href="#" class="text-sm text-[var(--primary)] font-bold hover:underline whitespace-nowrap">Forgot Password?</a>
+                    <a href="#" class="text-sm text-[var(--primary)] font-bold hover:underline whitespace-nowrap text-right">Forgot Password?</a>
                 </div>
 
                 <button type="submit" class="w-full py-5 bg-[var(--primary)] text-white font-bold rounded-2xl shadow-xl hover:scale-[1.02] active:scale-95 transition-all btn-glow text-lg">Login to Account</button>

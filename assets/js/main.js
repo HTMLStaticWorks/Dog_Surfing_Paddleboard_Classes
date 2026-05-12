@@ -61,10 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollY = window.scrollY;
 
         // Header stabilization & shrinking
-        if (scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+        if (header) {
+            if (scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         }
 
         // Back to Top visibility
@@ -98,11 +100,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
             document.body.style.paddingRight = `${scrollBarWidth}px`;
             document.body.style.overflow = 'hidden';
-            header.style.paddingRight = `${scrollBarWidth}px`;
+            if (header) header.style.paddingRight = `${scrollBarWidth}px`;
         } else {
             document.body.style.paddingRight = '';
             document.body.style.overflow = '';
-            header.style.paddingRight = '';
+            if (header) header.style.paddingRight = '';
         }
     };
 
