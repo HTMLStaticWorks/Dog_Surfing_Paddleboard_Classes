@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SurfPup | Professional Dog Surfing & Paddleboard Classes</title>
-    <meta name="description" content="Join the best dog surfing and paddleboard classes! Fun, safe, and professional training for your furry friends.">
+    <meta name="description"
+        content="Join the best dog surfing and paddleboard classes! Fun, safe, and professional training for your furry friends.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,18 +23,22 @@
     </script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%2336D1DC'/><path d='M30 45c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm30-20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm-35 15c10.5 0 17.5-12 17.5-12s-7-5-17.5-5-17.5 5-17.5 5 7 12 17.5 12z' fill='white'/></svg>">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%2336D1DC'/><path d='M30 45c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm30-20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm-35 15c10.5 0 17.5-12 17.5-12s-7-5-17.5-5-17.5 5-17.5 5 7 12 17.5 12z' fill='white'/></svg>">
 </head>
+
 <body class="transition-colors duration-300">
 
     <!-- Header -->
     <header class="fixed top-0 w-full z-50 transition-all duration-300">
         <nav class="container mx-auto  py-4 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 bg-[var(--primary)] rounded-xl flex items-center justify-center shadow-lg shadow-[var(--primary)]/20 transition-transform group-hover:scale-110">
+                <div
+                    class="w-10 h-10 bg-[var(--primary)] rounded-xl flex items-center justify-center shadow-lg shadow-[var(--primary)]/20 transition-transform group-hover:scale-110">
                     <i class="fas fa-paw text-white text-xl"></i>
                 </div>
-                <span class="text-2xl font-black tracking-tighter text-[var(--primary-dark)] dark:text-white">Surf<span class="text-[var(--primary)]">Pup</span></span>
+                <span class="text-2xl font-black tracking-tighter text-[var(--primary-dark)] dark:text-white">Surf<span
+                        class="text-[var(--primary)]">Pup</span></span>
             </a>
 
             <!-- Desktop Menu -->
@@ -47,14 +53,17 @@
             </div>
 
             <div class="hidden lg:flex items-center gap-4">
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                <button id="theme-toggle"
+                    class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
                     <i class="fas fa-sun dark:hidden"></i>
                     <i class="fas fa-moon hidden dark:block"></i>
                 </button>
-                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                <button id="rtl-toggle"
+                    class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
                     <i class="fas fa-globe"></i>
                 </button>
-                <a href="pages/login.html" class=" py-2 bg-[var(--primary)] text-white rounded-full font-bold shadow-lg hover:scale-105 transition-all btn-glow px-8">Login</a>
+                <a href="pages/login.html"
+                    class=" py-2 bg-[var(--primary)] text-white rounded-full font-bold shadow-lg hover:scale-105 transition-all btn-glow px-8">Login</a>
             </div>
 
             <!-- Mobile Toggle -->
@@ -64,7 +73,7 @@
         </nav>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden flex-col pt-4 pb-8 border-t border-gray-100 dark:border-gray-800">
+        <div id="mobile-menu" class="hidden lg:hidden flex-col pb-8 border-gray-100 dark:border-gray-800">
             <a href="index.html" class="nav-link active font-medium px-4">Home 1</a>
             <a href="pages/home-2.html" class="nav-link font-medium px-4">Home 2</a>
             <a href="pages/about.html" class="nav-link font-medium px-4">About</a>
@@ -72,18 +81,21 @@
             <a href="pages/gallery.html" class="nav-link font-medium px-4">Gallery</a>
             <a href="pages/booking.html" class="nav-link font-medium px-4">Booking</a>
             <a href="pages/contact.html" class="nav-link font-medium px-4">Contact</a>
-            
+
             <div class="flex flex-col space-y-6 px-8 pt-8 mt-4 border-t border-gray-100 dark:border-gray-800">
                 <div class="flex items-center justify-center gap-6">
-                    <button id="mobile-theme-toggle" class="w-14 h-14 rounded-2xl bg-gray-100 dark:bg-slate-800 flex items-center justify-center text-xl shadow-sm">
+                    <button id="mobile-theme-toggle"
+                        class="w-14 h-14 rounded-2xl bg-gray-100 dark:bg-slate-800 flex items-center justify-center text-xl shadow-sm">
                         <i class="fas fa-sun dark:hidden"></i>
                         <i class="fas fa-moon hidden dark:block"></i>
                     </button>
-                    <button id="mobile-rtl-toggle" class="w-14 h-14 rounded-2xl bg-gray-100 dark:bg-slate-800 flex items-center justify-center text-xl shadow-sm">
+                    <button id="mobile-rtl-toggle"
+                        class="w-14 h-14 rounded-2xl bg-gray-100 dark:bg-slate-800 flex items-center justify-center text-xl shadow-sm">
                         <i class="fas fa-globe"></i>
                     </button>
                 </div>
-                <a href="pages/login.html" class="w-full py-4 bg-[var(--primary)] text-white rounded-2xl font-bold shadow-lg text-center btn-glow text-lg">Login Account</a>
+                <a href="pages/login.html"
+                    class="w-full py-4 bg-[var(--primary)] text-white rounded-2xl font-bold shadow-lg text-center btn-glow text-lg">Login</a>
             </div>
         </div>
     </header>
@@ -95,11 +107,17 @@
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
         <div class="container mx-auto  relative z-10 text-center text-white reveal reveal-up">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Where Every Dog <br><span class="text-[var(--primary)]">Finds Their Wave</span></h1>
-            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto opacity-90">Professional surfing and paddleboard classes designed specifically for your furry best friends. Safe, fun, and unforgettable!</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Where Every Dog <br><span
+                    class="text-[var(--primary)]">Finds Their Wave</span></h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto opacity-90">Professional surfing and paddleboard
+                classes designed specifically for your furry best friends. Safe, fun, and unforgettable!</p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                <a href="pages/booking.html" class="px-10 py-4 bg-[var(--primary)] text-white rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition-all btn-glow">Book a Class Now</a>
-                <a href="pages/classes.html" class="px-10 py-4 border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all">Explore Classes</a>
+                <a href="pages/booking.html"
+                    class="px-10 py-4 bg-[var(--primary)] text-white rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition-all btn-glow">Book
+                    a Class Now</a>
+                <a href="pages/classes.html"
+                    class="px-10 py-4 border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-black transition-all">Explore
+                    Classes</a>
             </div>
 
         </div>
@@ -110,44 +128,64 @@
         <div class="container mx-auto ">
             <div class="text-center mb-16 reveal reveal-up">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Our Featured Classes</h2>
-                <p class="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">From first-timers to wave veterans, we have the perfect class for every pup.</p>
+                <p class="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">From first-timers to wave veterans, we have
+                    the perfect class for every pup.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Class 1 -->
                 <div class="glass p-8 rounded-3xl card-hover reveal reveal-left flex flex-col h-full">
                     <div class="h-56 mb-6 rounded-2xl overflow-hidden relative">
-                        <img src="assets/images/hero-1.png" alt="Beginner Surf" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
+                        <img src="assets/images/hero-1.png" alt="Beginner Surf"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                            loading="lazy">
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Beginner Surf Intro</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">Introduction to water confidence and basic board balance for dogs of all sizes.</p>
-                    <div class="mt-auto flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-gray-100 dark:border-slate-700/50">
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">Introduction to water confidence and basic board
+                        balance for dogs of all sizes.</p>
+                    <div
+                        class="mt-auto flex flex-col items-start gap-2 pt-4 border-t border-gray-100 dark:border-slate-700/50">
                         <span class="text-[var(--primary)] font-bold text-xl whitespace-nowrap">$45 / Session</span>
-                        <a href="pages/booking.html" class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline whitespace-nowrap">Learn More →</a>
+                        <a href="pages/booking.html"
+                            class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline whitespace-nowrap">Learn
+                            More →</a>
                     </div>
                 </div>
                 <!-- Class 2 -->
                 <div class="glass p-8 rounded-3xl card-hover reveal reveal-up flex flex-col h-full">
                     <div class="h-56 mb-6 rounded-2xl overflow-hidden relative">
-                        <img src="assets/images/hero-2.png" alt="Paddleboard" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
+                        <img src="assets/images/hero-2.png" alt="Paddleboard"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                            loading="lazy">
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Zen Paddleboarding</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">A calm and relaxing experience for dogs who prefer steady waters and scenic views.</p>
-                    <div class="mt-auto flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-gray-100 dark:border-slate-700/50">
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">A calm and relaxing experience for dogs who prefer
+                        steady waters and scenic views.</p>
+                    <div
+                        class="mt-auto flex flex-col items-start gap-2 pt-4 border-t border-gray-100 dark:border-slate-700/50">
                         <span class="text-[var(--primary)] font-bold text-xl whitespace-nowrap">$60 / Session</span>
-                        <a href="pages/booking.html" class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline whitespace-nowrap">Learn More →</a>
+                        <a href="pages/booking.html"
+                            class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline whitespace-nowrap">Learn
+                            More →</a>
                     </div>
                 </div>
                 <!-- Class 3 centered on tablet -->
                 <div class="md:col-span-2 lg:col-span-1 md:flex md:justify-center">
-                    <div class="glass p-8 rounded-3xl card-hover reveal reveal-right flex flex-col h-full w-full max-w-md lg:max-w-none">
+                    <div
+                        class="glass p-8 rounded-3xl card-hover reveal reveal-right flex flex-col h-full w-full max-w-md lg:max-w-none">
                         <div class="h-56 mb-6 rounded-2xl overflow-hidden relative">
-                            <img src="assets/images/gallery-2.png" alt="Pro Surf" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" loading="lazy">
+                            <img src="assets/images/gallery-2.png" alt="Pro Surf"
+                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                loading="lazy">
                         </div>
                         <h3 class="text-2xl font-bold mb-3">Advanced Wave Riders</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-6">For the adventurous dogs ready to catch real waves and perform tricks on the board.</p>
-                        <div class="mt-auto flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-gray-100 dark:border-slate-700/50">
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">For the adventurous dogs ready to catch real
+                            waves and perform tricks on the board.</p>
+                        <div
+                            class="mt-auto flex flex-col items-start gap-2 pt-4 border-t border-gray-100 dark:border-slate-700/50">
                             <span class="text-[var(--primary)] font-bold text-xl whitespace-nowrap">$75 / Session</span>
-                            <a href="pages/booking.html" class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline whitespace-nowrap">Learn More →</a>
+                            <a href="pages/booking.html"
+                                class="text-[var(--primary-dark)] dark:text-[var(--primary)] font-bold hover:underline whitespace-nowrap">Learn
+                                More →</a>
                         </div>
                     </div>
                 </div>
@@ -159,11 +197,13 @@
     <section class=" bg-[var(--beach-sand)] dark:bg-slate-800 overflow-hidden">
         <div class="container mx-auto flex flex-col lg:flex-row items-center gap-16">
             <div class="relative max-w-xl mx-auto lg:mx-0 w-full">
-                <img src="assets/images/team.png" alt="Safety Team" class="rounded-[3rem] shadow-2xl w-full md:h-[450px] h-auto object-cover" loading="lazy">
+                <img src="assets/images/team.png" alt="Safety Team"
+                    class="rounded-[3rem] shadow-2xl w-full md:h-[450px] h-auto object-cover" loading="lazy">
             </div>
             <div class="lg:w-1/2 reveal reveal-right text-center lg:text-left">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">SurfPup Safety Standards</h2>
-                <p class="text-lg text-gray-700 dark:text-gray-300 mb-8">We believe every dog can enjoy the water, but safety is our top priority. We evaluate breed eligibility based on swimming ability and stamina.</p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 mb-8">We believe every dog can enjoy the water, but
+                    safety is our top priority. We evaluate breed eligibility based on swimming ability and stamina.</p>
                 <ul class="space-y-4 mb-10">
                     <li class="flex items-center space-x-3">
                         <i class="fas fa-check-circle text-[var(--primary)] text-xl"></i>
@@ -178,7 +218,9 @@
                         <span>Temperature-controlled beach zones</span>
                     </li>
                 </ul>
-                <a href="pages/about.html" class="inline-block px-8 py-3 bg-[var(--primary-dark)] text-white rounded-full font-bold hover:bg-[var(--primary)] transition-all mx-auto lg:mx-0">Read Safety Guidelines</a>
+                <a href="pages/about.html"
+                    class="inline-block px-8 py-3 bg-[var(--primary-dark)] text-white rounded-full font-bold hover:bg-[var(--primary)] transition-all mx-auto lg:mx-0">Read
+                    Safety Guidelines</a>
             </div>
         </div>
     </section>
@@ -188,19 +230,24 @@
         <div class="container mx-auto ">
             <div class="text-center mb-16 reveal reveal-up">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Find The Perfect Fit</h2>
-                <p class="text-gray-600 dark:text-gray-400">Our life jacket sizing guide ensures your pup stays afloat with comfort.</p>
+                <p class="text-gray-600 dark:text-gray-400">Our life jacket sizing guide ensures your pup stays afloat
+                    with comfort.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="glass p-10 rounded-3xl text-center card-hover reveal reveal-up" style="transition-delay: 0.1s">
-                    <div class="w-20 h-20 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[var(--primary)]/20">
+                <div class="glass p-10 rounded-3xl text-center card-hover reveal reveal-up"
+                    style="transition-delay: 0.1s">
+                    <div
+                        class="w-20 h-20 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[var(--primary)]/20">
                         <span class="text-3xl font-bold text-white">S</span>
                     </div>
                     <h3 class="text-2xl font-bold mb-2">Small</h3>
                     <p class="text-gray-500 mb-4">5 - 15 lbs</p>
                     <p class="text-gray-600 dark:text-gray-400">Perfect for Chihuahuas, Terriers, and Pugs.</p>
                 </div>
-                <div class="glass p-10 rounded-3xl text-center card-hover border-2 border-[var(--primary)] bg-[var(--primary)] reveal reveal-up" style="transition-delay: 0.2s">
-                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <div class="glass p-10 rounded-3xl text-center card-hover border-2 border-[var(--primary)] bg-[var(--primary)] reveal reveal-up"
+                    style="transition-delay: 0.2s">
+                    <div
+                        class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                         <span class="text-3xl font-bold text-white">M</span>
                     </div>
                     <h3 class="text-2xl font-bold mb-2 text-white">Medium</h3>
@@ -209,8 +256,10 @@
                 </div>
                 <!-- Size L centered on tablet -->
                 <div class="md:col-span-2 lg:col-span-1 md:flex md:justify-center">
-                    <div class="glass p-10 rounded-3xl text-center card-hover reveal reveal-up w-full max-w-md lg:max-w-none" style="transition-delay: 0.3s">
-                        <div class="w-20 h-20 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[var(--primary)]/20">
+                    <div class="glass p-10 rounded-3xl text-center card-hover reveal reveal-up w-full max-w-md lg:max-w-none"
+                        style="transition-delay: 0.3s">
+                        <div
+                            class="w-20 h-20 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[var(--primary)]/20">
                             <span class="text-3xl font-bold text-white">L</span>
                         </div>
                         <h3 class="text-2xl font-bold mb-2">Large</h3>
@@ -220,7 +269,8 @@
                 </div>
             </div>
             <div class="mt-16 text-center reveal reveal-up">
-                <img src="assets/images/life-jackets.png" alt="Life Jackets" class="mx-auto rounded-3xl shadow-xl max-w-lg w-full h-auto object-cover" loading="lazy">
+                <img src="assets/images/life-jackets.png" alt="Life Jackets"
+                    class="mx-auto rounded-3xl shadow-xl max-w-lg w-full h-auto object-cover" loading="lazy">
             </div>
         </div>
     </section>
@@ -232,11 +282,15 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="glass p-8 rounded-3xl reveal reveal-left flex flex-col h-full">
                     <div class="flex items-center space-x-1 text-yellow-400 mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 mb-6 flex-grow">"Cooper absolutely loved his first surf lesson! The trainers were so patient and kind. Seeing him catch a wave was the highlight of my year!"</p>
+                    <p class="text-gray-700 dark:text-gray-300 mb-6 flex-grow">"Cooper absolutely loved his first surf
+                        lesson! The trainers were so patient and kind. Seeing him catch a wave was the highlight of my
+                        year!"</p>
                     <div class="flex items-center gap-4 mt-auto">
-                        <img src="https://i.pravatar.cc/150?u=sarah" alt="Sarah" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white flex-shrink-0">
+                        <img src="https://i.pravatar.cc/150?u=sarah" alt="Sarah"
+                            class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white flex-shrink-0">
                         <div class="min-w-0">
                             <p class="font-bold truncate">Sarah & Cooper</p>
                             <p class="text-sm text-gray-500 truncate">Golden Retriever Mom</p>
@@ -245,11 +299,14 @@
                 </div>
                 <div class="glass p-8 rounded-3xl reveal reveal-up flex flex-col h-full">
                     <div class="flex items-center space-x-1 text-yellow-400 mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 mb-6 flex-grow">"The paddleboarding session was so peaceful. Max was nervous at first but now he wants to jump on every board he sees!"</p>
+                    <p class="text-gray-700 dark:text-gray-300 mb-6 flex-grow">"The paddleboarding session was so
+                        peaceful. Max was nervous at first but now he wants to jump on every board he sees!"</p>
                     <div class="flex items-center gap-4 mt-auto">
-                        <img src="https://i.pravatar.cc/150?u=james" alt="James" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white flex-shrink-0">
+                        <img src="https://i.pravatar.cc/150?u=james" alt="James"
+                            class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white flex-shrink-0">
                         <div class="min-w-0">
                             <p class="font-bold truncate">James & Max</p>
                             <p class="text-sm text-gray-500 truncate">Labrador Owner</p>
@@ -258,13 +315,17 @@
                 </div>
                 <!-- Testimonial 3 centered on tablet -->
                 <div class="md:col-span-2 lg:col-span-1 md:flex md:justify-center">
-                    <div class="glass p-8 rounded-3xl reveal reveal-right flex flex-col h-full w-full max-w-md lg:max-w-none">
+                    <div
+                        class="glass p-8 rounded-3xl reveal reveal-right flex flex-col h-full w-full max-w-md lg:max-w-none">
                         <div class="flex items-center space-x-1 text-yellow-400 mb-4">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="text-gray-700 dark:text-gray-300 mb-6 flex-grow">"Professional, safe, and incredibly fun. I recommend SurfPup to every dog owner I know. A must-try experience!"</p>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6 flex-grow">"Professional, safe, and incredibly
+                            fun. I recommend SurfPup to every dog owner I know. A must-try experience!"</p>
                         <div class="flex items-center gap-4 mt-auto">
-                            <img src="https://i.pravatar.cc/150?u=emily" alt="Emily" class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white flex-shrink-0">
+                            <img src="https://i.pravatar.cc/150?u=emily" alt="Emily"
+                                class="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white flex-shrink-0">
                             <div class="min-w-0">
                                 <p class="font-bold truncate">Emily & Bella</p>
                                 <p class="text-sm text-gray-500 truncate">Corgi Parent</p>
@@ -282,46 +343,72 @@
             <div class="flex flex-col lg:flex-row items-center gap-16 mb-20">
                 <div class="lg:w-1/2 reveal reveal-left text-center lg:text-left">
                     <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Make a Splash?</h2>
-                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-10">Don't let your dog miss out on the adventure of a lifetime. Book your first session today and join our surfing community!</p>
-                    <a href="pages/booking.html" class="inline-block px-10 py-4 bg-[var(--primary)] text-white rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all btn-glow mx-auto lg:mx-0">Start Your Adventure</a>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-10">Don't let your dog miss out on the
+                        adventure of a lifetime. Book your first session today and join our surfing community!</p>
+                    <a href="pages/booking.html"
+                        class="inline-block px-10 py-4 bg-[var(--primary)] text-white rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-all btn-glow mx-auto lg:mx-0">Start
+                        Your Adventure</a>
                 </div>
                 <div class="lg:w-1/2 grid grid-cols-2 gap-4 reveal reveal-right">
-                    <img src="assets/images/gallery-1.png" alt="Gallery 1" class="rounded-2xl h-48 w-full object-cover card-hover transition-transform duration-500 hover:scale-105" loading="lazy">
-                    <img src="assets/images/gallery-2.png" alt="Gallery 2" class="rounded-2xl h-48 w-full object-cover card-hover transition-transform duration-500 hover:scale-105" loading="lazy">
-                    <img src="assets/images/gallery-3.png" alt="Gallery 3" class="rounded-2xl h-48 w-full object-cover card-hover transition-transform duration-500 hover:scale-105" loading="lazy">
-                    <img src="assets/images/featured-1.png" alt="Gallery 4" class="rounded-2xl h-48 w-full object-cover card-hover transition-transform duration-500 hover:scale-105" loading="lazy">
+                    <img src="assets/images/gallery-1.png" alt="Gallery 1"
+                        class="rounded-2xl h-48 w-full object-cover card-hover transition-transform duration-500 hover:scale-105"
+                        loading="lazy">
+                    <img src="assets/images/gallery-2.png" alt="Gallery 2"
+                        class="rounded-2xl h-48 w-full object-cover card-hover transition-transform duration-500 hover:scale-105"
+                        loading="lazy">
+                    <img src="assets/images/gallery-3.png" alt="Gallery 3"
+                        class="rounded-2xl h-48 w-full object-cover card-hover transition-transform duration-500 hover:scale-105"
+                        loading="lazy">
+                    <img src="assets/images/featured-1.png" alt="Gallery 4"
+                        class="rounded-2xl h-48 w-full object-cover card-hover transition-transform duration-500 hover:scale-105"
+                        loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white pt-16 pb-8 border-t border-gray-100 dark:border-gray-800 transition-colors duration-300">
+    <footer
+        class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white pt-16 pb-8 border-t border-gray-100 dark:border-gray-800 transition-colors duration-300">
         <div class="container mx-auto ">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div>
                     <div class="flex items-center space-x-3 mb-6">
-                        <div class="w-10 h-10 bg-[var(--primary)] rounded-xl flex items-center justify-center shadow-lg">
+                        <div
+                            class="w-10 h-10 bg-[var(--primary)] rounded-xl flex items-center justify-center shadow-lg">
                             <i class="fas fa-paw text-white text-xl"></i>
                         </div>
-                        <span class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white">Surf<span class="text-[var(--primary)]">Pup</span></span>
+                        <span class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white">Surf<span
+                                class="text-[var(--primary)]">Pup</span></span>
                     </div>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">Professional dog surfing and paddleboard academy. We bring joy to dogs and owners through ocean adventures.</p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">Professional dog surfing and
+                        paddleboard academy. We bring joy to dogs and owners through ocean adventures.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i
+                                class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
                 <div>
                     <h4 class="text-xl font-bold mb-6 text-slate-900 dark:text-white">Quick Links</h4>
                     <ul class="space-y-4 text-gray-600 dark:text-gray-400">
                         <li><a href="index.html" class="hover:text-[var(--primary)] transition-colors">Home 1</a></li>
-                        <li><a href="pages/home-2.html" class="hover:text-[var(--primary)] transition-colors">Home 2</a></li>
-                        <li><a href="pages/about.html" class="hover:text-[var(--primary)] transition-colors">About Us</a></li>
-                        <li><a href="pages/classes.html" class="hover:text-[var(--primary)] transition-colors">Our Classes</a></li>
-                        <li><a href="pages/gallery.html" class="hover:text-[var(--primary)] transition-colors">Gallery</a></li>
-                        <li><a href="pages/booking.html" class="hover:text-[var(--primary)] transition-colors">Book Now</a></li>
+                        <li><a href="pages/home-2.html" class="hover:text-[var(--primary)] transition-colors">Home 2</a>
+                        </li>
+                        <li><a href="pages/about.html" class="hover:text-[var(--primary)] transition-colors">About
+                                Us</a></li>
+                        <li><a href="pages/classes.html" class="hover:text-[var(--primary)] transition-colors">Our
+                                Classes</a></li>
+                        <li><a href="pages/gallery.html"
+                                class="hover:text-[var(--primary)] transition-colors">Gallery</a></li>
+                        <li><a href="pages/booking.html" class="hover:text-[var(--primary)] transition-colors">Book
+                                Now</a></li>
                     </ul>
                 </div>
                 <div>
@@ -345,21 +432,23 @@
                     <h4 class="text-xl font-bold mb-6 text-slate-900 dark:text-white">Newsletter</h4>
                     <p class="text-gray-600 dark:text-gray-400 mb-6">Get surf tips and special offers in your inbox.</p>
                     <form class="flex flex-col space-y-4">
-                        <input type="email" placeholder="Your Email" class="px-4 py-3 bg-gray-100 dark:bg-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-slate-900 dark:text-white">
-                        <button class=" py-3 bg-[var(--primary)] text-white rounded-lg font-bold hover:scale-105 transition-all">Subscribe</button>
+                        <input type="email" placeholder="Your Email"
+                            class="px-4 py-3 bg-gray-100 dark:bg-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-slate-900 dark:text-white">
+                        <button
+                            class=" py-3 bg-[var(--primary)] text-white rounded-lg font-bold hover:scale-105 transition-all">Subscribe</button>
                     </form>
                 </div>
             </div>
-            <div class="border-t border-gray-100 dark:border-gray-800 pt-6 flex flex-col md:flex-row justify-center items-center relative">
-                <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2026 SurfPup Dog Surfing Academy. All rights reserved.</p>
-                
+            <div
+                class="border-t border-gray-100 dark:border-gray-800 pt-6 flex flex-col md:flex-row justify-center items-center relative">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2026 SurfPup Dog Surfing Academy. All rights
+                    reserved.</p>
+
             </div>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
-
-
-

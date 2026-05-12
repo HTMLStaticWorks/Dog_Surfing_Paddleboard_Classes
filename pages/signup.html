@@ -22,19 +22,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%2336D1DC'/><path d='M30 45c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm30-20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm-35 15c10.5 0 17.5-12 17.5-12s-7-5-17.5-5-17.5 5-17.5 5 7 12 17.5 12z' fill='white'/></svg>">
 </head>
-<body class="bg-[var(--beach-sand)] dark:bg-slate-900 min-h-screen flex items-center justify-center p-6 transition-colors duration-300">
-    <!-- Utility Toggles -->
-    <div class="absolute top-4 right-4 lg:fixed lg:top-8 lg:right-8 z-[100] flex items-center gap-2 md:gap-3">
-        <button id="theme-toggle" class="w-12 h-12 rounded-2xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-md shadow-2xl border border-white/20 flex items-center justify-center hover:scale-110 transition-all text-slate-900 dark:text-white">
-            <i class="fas fa-sun dark:hidden"></i>
-            <i class="fas fa-moon hidden dark:block"></i>
-        </button>
-        <button id="rtl-toggle" class="w-12 h-12 rounded-2xl bg-white/80 dark:bg-slate-800/80 backdrop-blur-md shadow-2xl border border-white/20 flex items-center justify-center hover:scale-110 transition-all text-slate-900 dark:text-white">
-            <i class="fas fa-globe"></i>
-        </button>
-    </div>
+<body class="bg-[var(--beach-sand)] dark:bg-slate-900 min-h-screen flex items-center justify-center p-6 pt-24 transition-colors duration-300">
+    
+    <div class="relative w-full max-w-xl">
+        <!-- Utility Toggles - Positioned Above the Card -->
+        <div class="absolute -top-16 right-0 flex items-center gap-4 z-[100]">
+            <button id="theme-toggle" class="w-12 h-12 rounded-full bg-white/40 dark:bg-slate-800/40 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 group text-slate-900 dark:text-white">
+                <i class="fas fa-sun dark:hidden group-hover:rotate-45 transition-transform duration-500"></i>
+                <i class="fas fa-moon hidden dark:block group-hover:-rotate-12 transition-transform duration-500"></i>
+            </button>
+            <button id="rtl-toggle" class="w-12 h-12 rounded-full bg-white/40 dark:bg-slate-800/40 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 text-slate-900 dark:text-white">
+                <i class="fas fa-globe"></i>
+            </button>
+        </div>
 
-    <div class="max-w-xl w-full glass rounded-[3rem] overflow-hidden shadow-2xl">
+        <div class="w-full glass rounded-[3rem] overflow-hidden shadow-2xl relative z-10">
         <!-- Form Side -->
         <div class="p-12 md:p-16 bg-white dark:bg-slate-800 flex flex-col justify-center">
             <div class="mb-10 text-center">
