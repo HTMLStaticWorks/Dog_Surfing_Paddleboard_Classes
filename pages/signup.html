@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | SurfPup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#36D1DC',
+                        'primary-dark': '#005C97',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%2336D1DC'/><path d='M30 45c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm30-20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm-35 15c10.5 0 17.5-12 17.5-12s-7-5-17.5-5-17.5 5-17.5 5 7 12 17.5 12z' fill='white'/></svg>">
+</head>
+<body class="bg-[var(--beach-sand)] dark:bg-slate-900 min-h-screen flex items-center justify-center p-6 transition-colors duration-300">
+    <!-- Utility Toggles -->
+    <div class="fixed top-6 right-6 z-50 flex items-center space-x-3">
+        <button id="theme-toggle" class="w-11 h-11 rounded-full bg-white dark:bg-slate-800 shadow-lg border border-gray-100 dark:border-slate-700 flex items-center justify-center hover:scale-110 transition-all text-slate-600 dark:text-gray-300">
+            <i class="fas fa-sun dark:hidden"></i>
+            <i class="fas fa-moon hidden dark:block"></i>
+        </button>
+        <button id="rtl-toggle" class="w-11 h-11 rounded-full bg-white dark:bg-slate-800 shadow-lg border border-gray-100 dark:border-slate-700 flex items-center justify-center hover:scale-110 transition-all text-slate-600 dark:text-gray-300">
+            <i class="fas fa-globe"></i>
+        </button>
+    </div>
+
+    <div class="max-w-xl w-full glass rounded-[3rem] overflow-hidden shadow-2xl reveal reveal-up">
+        <!-- Form Side -->
+        <div class="p-12 md:p-16 bg-white dark:bg-slate-800 flex flex-col justify-center">
+            <div class="mb-10 text-center">
+                <a href="../index.html" class="flex items-center justify-center space-x-3 mb-8 group">
+                    <div class="w-12 h-12 bg-[var(--primary)] rounded-2xl flex items-center justify-center shadow-lg shadow-[var(--primary)]/20 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-paw text-white text-xl"></i>
+                    </div>
+                    <span class="text-3xl font-black tracking-tighter text-[var(--primary-dark)] dark:text-white">Surf<span class="text-[var(--primary)]">Pup</span></span>
+                </a>
+                <h1 class="text-3xl font-bold mb-2">Create Account</h1>
+                <p class="text-gray-500">Join the world's best dog surfing community.</p>
+            </div>
+
+            <form class="space-y-5">
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">First Name</label>
+                    <input type="text" placeholder="John" class="w-full px-4 py-3 rounded-xl border border-gray-100 dark:border-slate-700 bg-gray-50 dark:bg-slate-900 outline-none focus:ring-2 focus:ring-[var(--primary)] transition-all" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Last Name</label>
+                    <input type="text" placeholder="Doe" class="w-full px-4 py-3 rounded-xl border border-gray-100 dark:border-slate-700 bg-gray-50 dark:bg-slate-900 outline-none focus:ring-2 focus:ring-[var(--primary)] transition-all" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                    <input type="email" placeholder="hello@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-100 dark:border-slate-700 bg-gray-50 dark:bg-slate-900 outline-none focus:ring-2 focus:ring-[var(--primary)] transition-all" required>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Password</label>
+                    <input type="password" placeholder="••••••••" class="w-full px-4 py-3 rounded-xl border border-gray-100 dark:border-slate-700 bg-gray-50 dark:bg-slate-900 outline-none focus:ring-2 focus:ring-[var(--primary)] transition-all" required>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <input type="checkbox" class="w-5 h-5 rounded border-gray-300 dark:border-slate-600 text-[var(--primary)] focus:ring-[var(--primary)] transition-all cursor-pointer" required>
+                    <span class="text-sm text-gray-500">I agree to the <a href="#" class="text-[var(--primary)] font-bold hover:underline">Terms & Conditions</a></span>
+                </div>
+                <button type="submit" class="w-full py-4 bg-[var(--primary)] text-white font-bold rounded-xl shadow-xl hover:scale-[1.02] active:scale-95 transition-all btn-glow text-lg">Create Account</button>
+            </form>
+
+            <div class="mt-8">
+                <div class="relative flex items-center justify-center mb-6">
+                    <div class="flex-grow border-t border-gray-100 dark:border-slate-700"></div>
+                    <span class="px-4 text-sm text-gray-400 bg-white dark:bg-slate-800">Or sign up with</span>
+                    <div class="flex-grow border-t border-gray-100 dark:border-slate-700"></div>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <button class="flex items-center justify-center py-3 rounded-xl border border-gray-100 dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700 transition-all group">
+                        <i class="fab fa-google text-lg text-gray-600 dark:text-gray-400 group-hover:text-[#DB4437]"></i>
+                    </button>
+                    <button class="flex items-center justify-center py-3 rounded-xl border border-gray-100 dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700 transition-all group">
+                        <i class="fab fa-facebook-f text-lg text-gray-600 dark:text-gray-400 group-hover:text-[#4267B2]"></i>
+                    </button>
+                    <button class="flex items-center justify-center py-3 rounded-xl border border-gray-100 dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700 transition-all group">
+                        <i class="fab fa-apple text-lg text-gray-600 dark:text-gray-400 group-hover:text-black dark:group-hover:text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <p class="text-gray-500">Already have an account? <a href="login.html" class="text-[var(--primary)] font-bold">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

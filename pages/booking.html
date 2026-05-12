@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Class | SurfPup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#36D1DC',
+                        'primary-dark': '#005C97',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%2336D1DC'/><path d='M30 45c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm30-20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm-35 15c10.5 0 17.5-12 17.5-12s-7-5-17.5-5-17.5 5-17.5 5 7 12 17.5 12z' fill='white'/></svg>">
+</head>
+<body class="transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="sticky top-0 w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto  py-4 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 bg-[var(--primary)] rounded-xl flex items-center justify-center shadow-lg shadow-[var(--primary)]/20 transition-transform group-hover:scale-110">
+                    <i class="fas fa-paw text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-black tracking-tighter text-[var(--primary-dark)] dark:text-white">Surf<span class="text-[var(--primary)]">Pup</span></span>
+            </a>
+
+            <div class="hidden xl:flex items-center space-x-8">
+                <a href="../index.html" class="nav-link font-medium">Home 1</a>
+                <a href="home-2.html" class="nav-link font-medium">Home 2</a>
+                <a href="about.html" class="nav-link font-medium">About</a>
+                <a href="classes.html" class="nav-link font-medium">Classes</a>
+                <a href="gallery.html" class="nav-link font-medium">Gallery</a>
+                <a href="booking.html" class="nav-link active font-medium">Booking</a>
+                <a href="contact.html" class="nav-link font-medium">Contact</a>
+            </div>
+
+            <div class="hidden xl:flex items-center space-x-4">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                    <i class="fas fa-sun dark:hidden"></i>
+                    <i class="fas fa-moon hidden dark:block"></i>
+                </button>
+                <button id="rtl-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                    <i class="fas fa-globe"></i>
+                </button>
+                <a href="login.html" class=" py-2 bg-[var(--primary)] text-white rounded-full font-bold shadow-lg hover:scale-105 transition-all btn-glow px-8">Login</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="xl:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden xl:hidden flex-col space-y-4 pt-4 pb-8 border-t border-gray-100 dark:border-gray-800">
+            <a href="../index.html" class="nav-link font-medium px-4">Home 1</a>
+            <a href="home-2.html" class="nav-link font-medium px-4">Home 2</a>
+            <a href="about.html" class="nav-link font-medium px-4">About</a>
+            <a href="classes.html" class="nav-link font-medium px-4">Classes</a>
+            <a href="gallery.html" class="nav-link font-medium px-4">Gallery</a>
+            <a href="booking.html" class="nav-link active font-medium px-4">Booking</a>
+            <a href="contact.html" class="nav-link font-medium px-4">Contact</a>
+            <div class="flex items-center space-x-4 px-4 pt-4">
+                <a href="login.html" class="w-full py-3 bg-[var(--primary)] text-white rounded-full font-bold shadow-lg text-center">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="relative  bg-slate-900 overflow-hidden">
+        <img src="../assets/images/hero-1.png" alt="Booking Hero" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="container mx-auto  relative z-10 text-center text-white reveal reveal-up">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Book Your Wave</h1>
+            <p class="text-xl opacity-80">Simple steps to an unforgettable beach day.</p>
+        </div>
+    </section>
+
+    <!-- Booking Content -->
+    <section class=" bg-white dark:bg-slate-900">
+        <div class="container mx-auto  max-w-6xl">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <!-- Left: Booking Form -->
+                <div class="lg:w-2/3 reveal reveal-left">
+                    <div class="glass p-10 rounded-[2.5rem] shadow-2xl">
+                        <h2 class="text-3xl font-bold mb-8">Reservation Details</h2>
+                        <form class="space-y-8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Dog Name</label>
+                                    <input type="text" placeholder="Buddy" class="w-full  py-4 rounded-2xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 outline-none focus:ring-2 focus:ring-[var(--primary)] transition-all" required>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Breed</label>
+                                    <input type="text" placeholder="Labrador" class="w-full  py-4 rounded-2xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 outline-none focus:ring-2 focus:ring-[var(--primary)] transition-all" required>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Select Class</label>
+                                    <select class="w-full  py-4 rounded-2xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 outline-none focus:ring-2 focus:ring-[var(--primary)] transition-all" required>
+                                        <option value="">Choose a class</option>
+                                        <option>Beginner Surf Intro</option>
+                                        <option>Zen Paddleboarding</option>
+                                        <option>Advanced Wave Riders</option>
+                                        <option>Private Coaching</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Preferred Date</label>
+                                    <input type="date" class="w-full  py-4 rounded-2xl border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 outline-none focus:ring-2 focus:ring-[var(--primary)] transition-all" required>
+                                </div>
+                            </div>
+
+                            <!-- Vet Record Upload -->
+                            <div class="p-8 border-2 border-dashed border-gray-200 dark:border-slate-700 rounded-3xl bg-blue-50/30 dark:bg-slate-800/30">
+                                <h3 class="font-bold text-xl mb-4 flex items-center">
+                                    <i class="fas fa-file-medical text-[var(--primary)] mr-3"></i>
+                                    Vet Record Upload
+                                </h3>
+                                <p class="text-gray-500 text-sm mb-6">Please upload a photo of your dog's current vaccination/health records.</p>
+                                <div class="flex items-center justify-center w-full">
+                                    <label class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-2xl cursor-pointer bg-white hover:bg-gray-50 dark:bg-slate-800 dark:border-slate-600">
+                                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                            <i class="fas fa-cloud-upload-alt text-2xl text-gray-400 mb-2"></i>
+                                            <p class="text-sm text-gray-500 font-semibold">Click to upload or drag and drop</p>
+                                        </div>
+                                        <input type="file" class="hidden" />
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full py-5 bg-[var(--primary)] text-white font-bold text-xl rounded-2xl shadow-xl hover:scale-[1.02] active:scale-95 transition-all btn-glow">Confirm Booking</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right: Info/Schedule -->
+                <div class="lg:w-1/3 space-y-8">
+                    <!-- Schedule Card -->
+                    <div class="glass p-8 rounded-[2rem] reveal reveal-right">
+                        <h3 class="text-2xl font-bold mb-6">Weekly Schedule</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center border-b border-gray-100 dark:border-slate-700 pb-3">
+                                <span class="font-medium text-gray-600 dark:text-gray-400">Mon - Fri</span>
+                                <span class="font-bold">8:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-gray-100 dark:border-slate-700 pb-3">
+                                <span class="font-medium text-gray-600 dark:text-gray-400">Saturday</span>
+                                <span class="font-bold">7:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-3">
+                                <span class="font-medium text-gray-600 dark:text-gray-400">Sunday</span>
+                                <span class="font-bold">7:00 AM - 2:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Availability Note -->
+                    <div class="glass p-8 rounded-[2rem] bg-[var(--primary)] bg-opacity-10 reveal reveal-right" style="transition-delay: 0.1s">
+                        <i class="fas fa-info-circle text-2xl text-[var(--primary)] mb-4"></i>
+                        <h4 class="font-bold mb-2">High Demand!</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Weekend slots are typically booked 2 weeks in advance. We recommend booking early!</p>
+                    </div>
+
+                    <!-- Visual Help -->
+                    <div class="reveal reveal-right" style="transition-delay: 0.2s">
+                        <img src="../assets/images/vet-records.png" alt="Help" class="rounded-[2rem] shadow-xl grayscale hover:grayscale-0 transition-all cursor-help w-full h-64 object-cover" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white pt-24 pb-12 border-t border-gray-100 dark:border-gray-800 transition-colors duration-300">
+        <div class="container mx-auto ">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-[var(--primary)] rounded-xl flex items-center justify-center shadow-lg">
+                            <i class="fas fa-paw text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white">Surf<span class="text-[var(--primary)]">Pup</span></span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">Professional dog surfing and paddleboard academy. We bring joy to dogs and owners through ocean adventures.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-slate-900 dark:text-white">Quick Links</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="../index.html" class="hover:text-[var(--primary)] transition-colors">Home 1</a></li>
+                        <li><a href="home-2.html" class="hover:text-[var(--primary)] transition-colors">Home 2</a></li>
+                        <li><a href="about.html" class="hover:text-[var(--primary)] transition-colors">About Us</a></li>
+                        <li><a href="classes.html" class="hover:text-[var(--primary)] transition-colors">Our Classes</a></li>
+                        <li><a href="gallery.html" class="hover:text-[var(--primary)] transition-colors">Gallery</a></li>
+                        <li><a href="booking.html" class="hover:text-[var(--primary)] transition-colors">Book Now</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-slate-900 dark:text-white">Contact Info</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-[var(--primary)]"></i>
+                            <span>123 Surfside Ave, Malibu, CA</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-[var(--primary)]"></i>
+                            <span>+1 234 567 890</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-[var(--primary)]"></i>
+                            <span>hello@pawsandwaves.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-slate-900 dark:text-white">Newsletter</h4>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">Get surf tips and special offers in your inbox.</p>
+                    <form class="flex flex-col space-y-4">
+                        <input type="email" placeholder="Your Email" class="px-4 py-3 bg-gray-100 dark:bg-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-slate-900 dark:text-white">
+                        <button class=" py-3 bg-[var(--primary)] text-white rounded-lg font-bold hover:scale-105 transition-all">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-100 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-center items-center relative">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2026 SurfPup Dog Surfing Academy. All rights reserved.</p>
+                <a href="#" class="md:absolute md:right-0 w-10 h-10 bg-[var(--primary)] text-white rounded-full flex items-center justify-center hover:scale-110 transition-all shadow-lg group">
+                    <i class="fas fa-arrow-up text-sm transition-transform group-hover:-translate-y-1"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

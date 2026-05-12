@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | SurfPup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#36D1DC',
+                        'primary-dark': '#005C97',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%2336D1DC'/><path d='M30 45c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm30-20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm10 20c5.52 0 10-4.48 10-10s-4.48-10-10-10-10 4.48-10 10 4.48 10 10 10zm-35 15c10.5 0 17.5-12 17.5-12s-7-5-17.5-5-17.5 5-17.5 5 7 12 17.5 12z' fill='white'/></svg>">
+</head>
+<body class="relative bg-slate-900 transition-colors duration-300 overflow-x-hidden">
+    <!-- Animated Background -->
+    <div class="fixed inset-0 z-0">
+        <img src="../assets/images/bg-beach.png" alt="Background" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-br from-[var(--primary-dark)] via-transparent to-black opacity-70"></div>
+    </div>
+
+    <div class="min-h-screen flex items-center justify-center p-6 relative z-10">
+        <div class="max-w-3xl w-full text-center text-white reveal reveal-up">
+            <div class="flex items-center space-x-3 mb-8 justify-center">
+                <div class="w-12 h-12 bg-[var(--primary)] rounded-2xl flex items-center justify-center shadow-lg shadow-[var(--primary)]/20">
+                    <i class="fas fa-paw text-white text-2xl"></i>
+                </div>
+                <span class="text-4xl font-black tracking-tighter text-white">Surf<span class="text-[var(--primary)]">Pup</span></span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">Our New Season is <br><span class="text-[var(--primary)]">Approaching the Shore!</span></h1>
+            <p class="text-xl md:text-2xl mb-12 opacity-80 max-w-xl mx-auto">We're training our new squad of trainers. Our upcoming summer season will be bigger, better, and splashier than ever!</p>
+            
+            <!-- Countdown Placeholder -->
+            <div class="grid grid-cols-4 gap-4 md:gap-8 mb-16 max-w-2xl mx-auto">
+                <div class="glass p-6 rounded-3xl">
+                    <span class="block text-4xl md:text-5xl font-bold">14</span>
+                    <span class="text-xs md:text-sm uppercase tracking-widest opacity-60">Days</span>
+                </div>
+                <div class="glass p-6 rounded-3xl">
+                    <span class="block text-4xl md:text-5xl font-bold">08</span>
+                    <span class="text-xs md:text-sm uppercase tracking-widest opacity-60">Hours</span>
+                </div>
+                <div class="glass p-6 rounded-3xl">
+                    <span class="block text-4xl md:text-5xl font-bold">45</span>
+                    <span class="text-xs md:text-sm uppercase tracking-widest opacity-60">Mins</span>
+                </div>
+                <div class="glass p-6 rounded-3xl">
+                    <span class="block text-4xl md:text-5xl font-bold">12</span>
+                    <span class="text-xs md:text-sm uppercase tracking-widest opacity-60">Secs</span>
+                </div>
+            </div>
+
+            <form class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 max-w-lg mx-auto">
+                <input type="email" placeholder="Enter your email" class="w-full  py-4 px-6 rounded-full bg-white/20 border border-white/30 text-white placeholder-white/60 outline-none focus:bg-white/30 transition-all">
+                <button type="submit" class="px-10 py-4 bg-[var(--primary)] text-white rounded-full font-bold shadow-xl hover:scale-105 transition-all flex-shrink-0">Notify Me</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white pt-24 pb-12 border-t border-gray-100 dark:border-gray-800 transition-colors duration-300 relative z-10">
+        <div class="container mx-auto ">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-[var(--primary)] rounded-xl flex items-center justify-center shadow-lg">
+                            <i class="fas fa-paw text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white">Surf<span class="text-[var(--primary)]">Pup</span></span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">Professional dog surfing and paddleboard academy. We bring joy to dogs and owners through ocean adventures.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:bg-[var(--primary)] transition-all"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-slate-900 dark:text-white">Quick Links</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li><a href="../index.html" class="hover:text-[var(--primary)] transition-colors">Home 1</a></li>
+                        <li><a href="home-2.html" class="hover:text-[var(--primary)] transition-colors">Home 2</a></li>
+                        <li><a href="about.html" class="hover:text-[var(--primary)] transition-colors">About Us</a></li>
+                        <li><a href="classes.html" class="hover:text-[var(--primary)] transition-colors">Our Classes</a></li>
+                        <li><a href="gallery.html" class="hover:text-[var(--primary)] transition-colors">Gallery</a></li>
+                        <li><a href="booking.html" class="hover:text-[var(--primary)] transition-colors">Book Now</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-slate-900 dark:text-white">Contact Info</h4>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-map-marker-alt text-[var(--primary)]"></i>
+                            <span>123 Surfside Ave, Malibu, CA</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-phone text-[var(--primary)]"></i>
+                            <span>+1 234 567 890</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-envelope text-[var(--primary)]"></i>
+                            <span>hello@pawsandwaves.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-slate-900 dark:text-white">Newsletter</h4>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">Get surf tips and special offers in your inbox.</p>
+                    <form class="flex flex-col space-y-4">
+                        <input type="email" placeholder="Your Email" class="px-4 py-3 bg-gray-100 dark:bg-slate-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] text-slate-900 dark:text-white">
+                        <button class=" py-3 bg-[var(--primary)] text-white rounded-lg font-bold hover:scale-105 transition-all">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-100 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-center items-center relative">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2026 SurfPup Dog Surfing Academy. All rights reserved.</p>
+                <a href="#" class="md:absolute md:right-0 w-10 h-10 bg-[var(--primary)] text-white rounded-full flex items-center justify-center hover:scale-110 transition-all shadow-lg group">
+                    <i class="fas fa-arrow-up text-sm transition-transform group-hover:-translate-y-1"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
