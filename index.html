@@ -59,8 +59,8 @@
                     <i class="fas fa-moon hidden dark:block"></i>
                 </button>
                 <button id="rtl-toggle"
-                    class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
-                    <i class="fas fa-globe"></i>
+                    class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors font-bold text-xs">
+                    RTL
                 </button>
                 <a href="pages/login.html"
                     class=" py-2 bg-[var(--primary)] text-white rounded-full font-bold shadow-lg hover:scale-105 transition-all btn-glow px-8">Login</a>
@@ -90,8 +90,8 @@
                         <i class="fas fa-moon hidden dark:block"></i>
                     </button>
                     <button id="mobile-rtl-toggle"
-                        class="w-14 h-14 rounded-2xl bg-gray-100 dark:bg-slate-800 flex items-center justify-center text-xl shadow-sm">
-                        <i class="fas fa-globe"></i>
+                        class="w-14 h-14 rounded-2xl bg-gray-100 dark:bg-slate-800 flex items-center justify-center text-sm font-bold shadow-sm">
+                        RTL
                     </button>
                 </div>
                 <a href="pages/login.html"
@@ -226,14 +226,19 @@
     </section>
 
     <!-- Life Jacket Sizing Guide -->
-    <section class=" bg-white dark:bg-slate-900 overflow-hidden">
-        <div class="container mx-auto ">
+    <section class="relative bg-white dark:bg-slate-900 overflow-hidden">
+        <!-- Background Image Element -->
+        <div class="absolute inset-0 z-0 pointer-events-none opacity-20 dark:opacity-10">
+            <img src="assets/images/life-jackets.png" alt="Life Jackets" class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto relative z-10">
             <div class="text-center mb-16 reveal reveal-up">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Find The Perfect Fit</h2>
                 <p class="text-gray-600 dark:text-gray-400">Our life jacket sizing guide ensures your pup stays afloat
                     with comfort.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Size S -->
                 <div class="glass p-10 rounded-3xl text-center card-hover reveal reveal-up"
                     style="transition-delay: 0.1s">
                     <div
@@ -244,6 +249,7 @@
                     <p class="text-gray-500 mb-4">5 - 15 lbs</p>
                     <p class="text-gray-600 dark:text-gray-400">Perfect for Chihuahuas, Terriers, and Pugs.</p>
                 </div>
+                <!-- Size M -->
                 <div class="glass p-10 rounded-3xl text-center card-hover border-2 border-[var(--primary)] bg-[var(--primary)] reveal reveal-up"
                     style="transition-delay: 0.2s">
                     <div
@@ -267,10 +273,6 @@
                         <p class="text-gray-600 dark:text-gray-400">Great for Labs, Goldens, and Shepherds.</p>
                     </div>
                 </div>
-            </div>
-            <div class="mt-16 text-center reveal reveal-up">
-                <img src="assets/images/life-jackets.png" alt="Life Jackets"
-                    class="mx-auto rounded-3xl shadow-xl max-w-lg w-full h-auto object-cover" loading="lazy">
             </div>
         </div>
     </section>
