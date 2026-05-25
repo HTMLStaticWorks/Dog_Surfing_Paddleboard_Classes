@@ -27,10 +27,10 @@
 
 [data-theme="dark"], .dark {
     color-scheme: dark;
-    --glass-bg: rgba(15, 23, 42, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --beach-sand: #1e293b;
-    color: #f8fafc;
+    --glass-bg: rgba(0, 0, 0, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --beach-sand: #1c1c1c;  /* dark grey for alternate sections */
+    color: #f1f5f9;
 }
 
 * {
@@ -68,7 +68,7 @@ html {
 }
 
 [data-theme="dark"] body, .dark body {
-    background-color: #0B1120;
+    background-color: #000000;
 }
 
 h1, h2, h3, h4, h5, h6, .brand-font {
@@ -209,9 +209,32 @@ section {
     border-radius: 10px;
 }
 
-/* RTL Support */
 [dir="rtl"] {
     text-align: right;
+}
+
+/* RTL Form-Specific Overrides for Login & Sign Up */
+[dir="rtl"] input,
+[dir="rtl"] select,
+[dir="rtl"] textarea {
+    text-align: right !important;
+}
+
+[dir="rtl"] .password-toggle,
+[dir="rtl"] #togglePassword,
+[dir="rtl"] button.password-toggle {
+    right: auto !important;
+    left: 1.5rem !important;
+}
+
+[dir="rtl"] .flex.items-center.justify-between,
+[dir="rtl"] .flex.items-center.space-x-3 {
+    flex-direction: row-reverse !important;
+}
+
+[dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0 !important;
+    margin-right: 0.75rem !important;
 }
 
 /* Ensure hero content stays centered in all modes */
@@ -343,11 +366,11 @@ header.scrolled {
 }
 
 [data-theme="dark"] header.scrolled, .dark header.scrolled {
-    background: rgba(15, 23, 42, 0.98) !important;
+    background: rgba(0, 0, 0, 0.98) !important;
 }
 
 [data-theme="dark"] header, .dark header {
-    background: rgba(15, 23, 42, 0.95) !important;
+    background: rgba(0, 0, 0, 0.92) !important;
 }
 
 /* Mobile Menu Slide Animation */
@@ -372,7 +395,7 @@ header.scrolled {
 }
 
 [data-theme="dark"] #mobile-menu, .dark #mobile-menu {
-    background: #0f172a !important;
+    background: #111111 !important;
 }
 
 #mobile-menu a.active {
@@ -450,9 +473,35 @@ section.hero, .hero-section {
 /* Fix for specific hero height if using h-screen */
 section.h-screen {
     height: calc(100vh - var(--header-height)) !important;
+    min-height: calc(100vh - var(--header-height)) !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
+}
+
+/* Hero background image — prevent cropping on desktop & 1024px */
+@media (min-width: 1024px) {
+    section.h-screen {
+        height: 100vh !important;
+        min-height: 100vh !important;
+        margin-top: calc(-1 * var(--header-height));
+        padding-top: var(--header-height);
+    }
+
+    section.h-screen .absolute.inset-0 {
+        top: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 100% !important;
+    }
+
+    section.h-screen .absolute.inset-0 img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
 }
 
 /* Ensure navbar links and buttons are always readable */
@@ -629,4 +678,52 @@ select {
     #mobile-menu {
         display: none !important;
     }
+}
+
+/* =====================================================
+   Dark Mode — True Black + Dark Grey alternate sections
+   Overrides Tailwind's dark:bg-slate-* utilities
+   ===================================================== */
+
+/* Footer Column Balance & spacing on 1024px+ desktops */
+@media (min-width: 1024px) {
+    footer .grid {
+        grid-template-columns: 1.25fr 0.7fr 0.95fr 1.1fr !important;
+        gap: 3.5rem !important;
+    }
+    /* Shift Contact Info column content more towards the left side of its cell */
+    footer .grid > div:nth-child(3) {
+        margin-left: -3rem !important; /* Shipped left */
+        padding-right: 1.5rem !important;
+    }
+}
+
+/* Primary background — pure black */
+[data-theme="dark"] .dark\:bg-slate-900,
+.dark .dark\:bg-slate-900 {
+    background-color: #000000 !important;
+}
+
+/* Alternate / card sections — dark grey */
+[data-theme="dark"] .dark\:bg-slate-800,
+.dark .dark\:bg-slate-800 {
+    background-color: #1c1c1c !important;
+}
+
+/* Slightly lighter grey for nested elements (inputs, modals) */
+[data-theme="dark"] .dark\:bg-slate-700,
+.dark .dark\:bg-slate-700 {
+    background-color: #262626 !important;
+}
+
+/* Subtle scrollbar in dark mode */
+[data-theme="dark"] ::-webkit-scrollbar-track,
+.dark ::-webkit-scrollbar-track {
+    background: #111111;
+}
+
+/* Auth page body (login, signup use dark:bg-slate-900 on body) */
+[data-theme="dark"] body.dark\:bg-slate-900,
+.dark body {
+    background-color: #000000 !important;
 }
