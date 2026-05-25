@@ -507,7 +507,6 @@ section.h-screen {
     
     body > section:first-of-type:not(.h-screen) img.absolute {
         object-fit: cover !important;
-        object-position: center center !important;
         width: 100% !important;
         height: 100% !important;
     }
