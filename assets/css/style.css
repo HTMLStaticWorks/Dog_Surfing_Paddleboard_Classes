@@ -211,6 +211,7 @@ section {
 
 [dir="rtl"] {
     text-align: right;
+    direction: rtl;
 }
 
 /* RTL Form-Specific Overrides for Login & Sign Up */
@@ -227,15 +228,6 @@ section {
     left: 1.5rem !important;
 }
 
-[dir="rtl"] .flex.items-center.justify-between,
-[dir="rtl"] .flex.items-center.space-x-3 {
-    flex-direction: row-reverse !important;
-}
-
-[dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]) {
-    margin-left: 0 !important;
-    margin-right: 0.75rem !important;
-}
 
 /* Ensure hero content stays centered in all modes */
 .hero .container, .hero-content {
@@ -502,6 +494,49 @@ section.h-screen {
         object-fit: cover !important;
         object-position: center center !important;
     }
+
+    /* Target subpage hero sections to ensure beautiful sizing and prevent background cropping */
+    body > section:first-of-type:not(.h-screen) {
+        height: 400px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    body > section:first-of-type:not(.h-screen) img.absolute {
+        object-fit: cover !important;
+        object-position: center center !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+/* Trainer Image Perfect Circle Fix */
+.trainer-img-container {
+    width: 12rem !important;
+    height: 12rem !important;
+    max-width: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+@media (max-width: 767px) {
+    /* Responsive sizing on mobile */
+    .trainer-img-container {
+        width: 10rem !important;
+        height: 10rem !important;
+    }
+}
+
+.trainer-img-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
 }
 
 /* Ensure navbar links and buttons are always readable */
@@ -647,6 +682,11 @@ header.sticky-active {
     margin-right: 0.75rem !important;
 }
 
+[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0 !important;
+    margin-right: 0.5rem !important;
+}
+
 /* Custom Select Styling */
 select {
     appearance: none !important;
@@ -686,7 +726,14 @@ select {
    ===================================================== */
 
 /* Footer Column Balance & spacing on 1024px+ desktops */
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1279.98px) {
+    footer .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 3.5rem !important;
+    }
+}
+
+@media (min-width: 1280px) {
     footer .grid {
         grid-template-columns: 1.25fr 0.7fr 0.95fr 1.1fr !important;
         gap: 3.5rem !important;
@@ -695,6 +742,12 @@ select {
     footer .grid > div:nth-child(3) {
         margin-left: -3rem !important; /* Shipped left */
         padding-right: 1.5rem !important;
+    }
+    [dir="rtl"] footer .grid > div:nth-child(3) {
+        margin-left: 0 !important;
+        margin-right: -3rem !important;
+        padding-right: 0 !important;
+        padding-left: 1.5rem !important;
     }
 }
 
