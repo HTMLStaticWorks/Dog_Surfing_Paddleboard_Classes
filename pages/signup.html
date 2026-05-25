@@ -24,18 +24,18 @@
 </head>
 <body class="bg-[var(--beach-sand)] dark:bg-slate-900 min-h-screen flex items-center justify-center p-6 pt-24 transition-colors duration-300">
     
-    <div class="relative w-full max-w-xl">
-        <!-- Utility Toggles - Positioned Absolute Top-Right in viewports -->
-        <div class="fixed top-6 right-6 rtl:right-auto rtl:left-6 md:top-8 md:right-8 rtl:md:right-auto rtl:md:left-8 flex items-center gap-4 z-[9999]">
-            <button id="theme-toggle" class="w-11 h-11 rounded-full bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 group text-slate-900 dark:text-white">
-                 <i class="fas fa-sun dark:hidden group-hover:rotate-45 transition-transform duration-500"></i>
-                 <i class="fas fa-moon hidden dark:block group-hover:-rotate-12 transition-transform duration-500"></i>
-            </button>
-            <button id="rtl-toggle" class="w-11 h-11 rounded-full bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 text-slate-900 dark:text-white text-xs font-bold">
-                RTL
-            </button>
-        </div>
+    <!-- Utility Toggles - Positioned Absolute Top-Right in viewports -->
+    <div class="absolute top-6 right-6 rtl:right-auto rtl:left-6 md:fixed md:top-8 md:right-8 rtl:md:right-auto rtl:md:left-8 flex items-center gap-4 z-[9999]">
+        <button id="theme-toggle" class="w-11 h-11 rounded-full bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 group text-slate-900 dark:text-white">
+             <i class="fas fa-sun dark:hidden group-hover:rotate-45 transition-transform duration-500"></i>
+             <i class="fas fa-moon hidden dark:block group-hover:-rotate-12 transition-transform duration-500"></i>
+        </button>
+        <button id="rtl-toggle" class="w-11 h-11 rounded-full bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 text-slate-900 dark:text-white text-xs font-bold">
+            RTL
+        </button>
+    </div>
 
+    <div class="relative w-full max-w-xl">
         <div class="w-full glass rounded-[3rem] overflow-hidden shadow-2xl relative z-10">
         <!-- Form Side -->
         <div class="p-12 md:p-16 bg-white dark:bg-slate-800 flex flex-col justify-center">
