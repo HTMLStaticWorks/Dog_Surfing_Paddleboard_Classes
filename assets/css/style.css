@@ -779,3 +779,76 @@ select {
 .dark body {
     background-color: #000000 !important;
 }
+
+/* =====================================================
+   Subpage Hero Styles (Responsive & Crop-resistant)
+   ===================================================== */
+.subpage-hero {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    overflow: hidden !important;
+    background-color: #0b1329 !important; /* Elegant dark navy fallback */
+    z-index: 1 !important;
+    height: 280px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+@media (min-width: 768px) {
+    .subpage-hero {
+        height: 340px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .subpage-hero {
+        height: 400px !important;
+    }
+}
+
+.subpage-hero-img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center; /* Removed !important to allow page overrides */
+    opacity: 0.35 !important;
+    z-index: -1 !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Page-specific focal points to prevent cut-off heads/subjects */
+.about-hero-img {
+    object-position: center 30% !important; /* Perfect composition fit for the surfboard dog image */
+}
+.booking-hero-img {
+    object-position: center 15% !important; /* Composition matches booking image */
+}
+.contact-hero-img {
+    object-position: center 15% !important; /* Positions camera higher to show both high-fiving dog and person's head fully */
+}
+.gallery-hero-img {
+    object-position: center top !important; /* Composition matches gallery image */
+}
+.classes-hero-img {
+    object-position: center 30% !important; /* Perfect composition fit for the learning dogs image */
+}
+
+.subpage-hero::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.65)) !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+}
+
+.subpage-hero > .container {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
